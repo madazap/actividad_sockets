@@ -1,4 +1,6 @@
 import fs from "fs";
+import { __dirname } from "./utils.js";
+
 
 class ProductManager {
   #path = "./src/products.json";
@@ -36,7 +38,7 @@ class ProductManager {
 
   async getProducts() {
     try {
-      console.log("estamos en la consulta del producto");
+      console.log("estamos en get products");
       const products = await fs.promises.readFile(this.#path, "utf-8");
       console.log(products);
       return JSON.parse(products);

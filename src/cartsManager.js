@@ -1,5 +1,6 @@
 import fs from "fs";
 import ProductManager from "./productManager.js";
+import { __dirname } from "./utils.js";
 
 const products = new ProductManager;
 
